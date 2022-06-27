@@ -16,7 +16,6 @@ env:
 
 jobs:
  infrastructure:
-    environment: github-pages
     runs-on: ubuntu-latest
     name: Setup, Build, and Deploy
     steps:
