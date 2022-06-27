@@ -26,11 +26,11 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
-        credentials_json: '${{ secrets.GCS_SA_KEY }}'
+        credentials_json: '${{ secrets.GCS_SA_KEY2 }}'
 
     - name: Setup - gcloud / gsutil
       uses: 'google-github-actions/setup-gcloud@v0'
      
     - name: Deploy
       run: |-
-        gsutil -m rsync -R docs gs://www.interpacket.de/
+        gsutil -m rsync -R docs gs://$GCS_BUCKET/
