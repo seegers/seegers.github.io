@@ -24,9 +24,7 @@ jobs:
     - name: Setup - gcloud / gsutil
       uses: 'google-github-actions/setup-gcloud@v0'
       with:
-        service_account_key: ${{ secrets.GCS_SA_KEY2 }}
-        project_id: ${{ secrets.GCS_PROJECT }}
-        export_default_credentials: true
+        credentials_json: ${{ secrets.GCS_SA_KEY2 }}
     - name: Deploy
       run: |-
         gsutil -m rsync -R output gs://$GCS_BUCKET
