@@ -33,4 +33,4 @@ jobs:
      
     - name: Deploy
       run: |-
-        gsutil -m rsync -R output gs://$GCS_BUCKET
+        gsutil -m rsync -R output gs://www.interpacket.de
