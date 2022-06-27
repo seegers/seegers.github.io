@@ -14,17 +14,21 @@ on:
 env:
   CS_BUCKET: ${{ secrets.GCS_BUCKET }}
 
-  steps:
-  - name: Checkout
-    uses: actions/checkout@v2
+jobs:
+  setup-build-deploy:
+    name: Setup, Build, and Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
 
-  - name: Setup - gcloud / gsutil
-    uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-    with:
-      service_account_key: ${{ secrets.GCS_SA_KEY }}
-      project_id: ${{ secrets.GCS_PROJECT }}
-      export_default_credentials: true
+    - name: Setup - gcloud / gsutil
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        service_account_key: ${{ secrets.GCS_SA_KEY }}
+        project_id: ${{ secrets.GCS_PROJECT }}
+        export_default_credentials: true
 
-  - name: Deploy
-    run: |-
-      gsutil -m rsync -R output gs://$GCS_BUCKET
+    - name: Deploy
+      run: |-
+        gsutil -m rsync -R output gs://$GCS_BUCKET
