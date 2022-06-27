@@ -15,9 +15,10 @@ env:
   CS_BUCKET: ${{ secrets.GCS_BUCKET }}
 
 jobs:
-  setup-build-deploy:
-    name: Setup, Build, and Deploy
+ infrastructure:
+    environment: github-pages
     runs-on: ubuntu-latest
+    name: Setup, Build, and Deploy
     steps:
     - name: Checkout
       uses: actions/checkout@v2
