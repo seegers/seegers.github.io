@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 env:
-  CS_BUCKET: ${{ secrets.GCS_BUCKET }}
+  GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
 
 jobs:
  infrastructure:
@@ -33,4 +33,4 @@ jobs:
      
     - name: Deploy
       run: |-
-        gsutil -m rsync -R output gs://www.interpacket.de/
+        gsutil -m rsync -R output gs://$GCS_BUCKET
