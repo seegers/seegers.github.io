@@ -38,3 +38,10 @@ draft: false
     - `git add -A`
     - `git commit -am "message"`
     - `git push`
+
+## Workflow new publication
+- publish current version: 
+    - `hugo`
+    - `git add -A`
+    - `git commit -am "message"`
+    - `git push`
