@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Setup Github Pages with Hugo static site generator and Visual Studio Code | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Setup Github Pages with Hugo static site generator and Visual Studio Code Create special GitHub repo for GitHub-Pages and clone it in VSC workspace Go to repo folder on local machine and create Hugo site. Use &ndash;force since the .git files are already there hugo new site . --force add theme Ananke git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&quot;ananke\&quot; &gt;&gt; config.toml change publication directory to &ldquo;docs&rdquo; to align with settings in GitHub pages echo publishDir = \&quot;docs\&quot; &gt;&gt; config.">
+    <meta name="generator" content="Hugo 0.100.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Setup Github Pages with Hugo static site generator and Visual Studio Code" />
+<meta property="og:description" content="Setup Github Pages with Hugo static site generator and Visual Studio Code Create special GitHub repo for GitHub-Pages and clone it in VSC workspace Go to repo folder on local machine and create Hugo site. Use &ndash;force since the .git files are already there hugo new site . --force add theme Ananke git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&quot;ananke\&quot; &gt;&gt; config.toml change publication directory to &ldquo;docs&rdquo; to align with settings in GitHub pages echo publishDir = \&quot;docs\&quot; &gt;&gt; config." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seegers.github.io/posts/howto_publish_hugo_to_github_pages/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-28T13:37:00+02:00" />
+<meta property="article:modified_time" content="2022-06-28T13:37:00+02:00" />
+
+<meta itemprop="name" content="Setup Github Pages with Hugo static site generator and Visual Studio Code">
+<meta itemprop="description" content="Setup Github Pages with Hugo static site generator and Visual Studio Code Create special GitHub repo for GitHub-Pages and clone it in VSC workspace Go to repo folder on local machine and create Hugo site. Use &ndash;force since the .git files are already there hugo new site . --force add theme Ananke git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&quot;ananke\&quot; &gt;&gt; config.toml change publication directory to &ldquo;docs&rdquo; to align with settings in GitHub pages echo publishDir = \&quot;docs\&quot; &gt;&gt; config."><meta itemprop="datePublished" content="2022-06-28T13:37:00+02:00" />
+<meta itemprop="dateModified" content="2022-06-28T13:37:00+02:00" />
+<meta itemprop="wordCount" content="167">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setup Github Pages with Hugo static site generator and Visual Studio Code"/>
+<meta name="twitter:description" content="Setup Github Pages with Hugo static site generator and Visual Studio Code Create special GitHub repo for GitHub-Pages and clone it in VSC workspace Go to repo folder on local machine and create Hugo site. Use &ndash;force since the .git files are already there hugo new site . --force add theme Ananke git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&quot;ananke\&quot; &gt;&gt; config.toml change publication directory to &ldquo;docs&rdquo; to align with settings in GitHub pages echo publishDir = \&quot;docs\&quot; &gt;&gt; config."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Setup Github Pages with Hugo static site generator and Visual Studio Code</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-06-28T13:37:00+02:00">June 28, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="setup-github-pages-with-hugo-static-site-generator-and-visual-studio-code">Setup Github Pages with Hugo static site generator and Visual Studio Code</h1>
+<ul>
+<li>Create special GitHub repo for GitHub-Pages and clone it in VSC workspace</li>
+<li>Go to repo folder on local machine and create Hugo site. Use &ndash;force since the .git files are already there
+<ul>
+<li><code>hugo new site . --force</code></li>
+</ul>
+</li>
+<li>add theme Ananke
+<ul>
+<li><code>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke</code></li>
+<li><code>echo theme = \&quot;ananke\&quot; &gt;&gt; config.toml</code></li>
+</ul>
+</li>
+<li>change publication directory to &ldquo;docs&rdquo; to align with settings in GitHub pages
+<ul>
+<li><code>echo publishDir = \&quot;docs\&quot; &gt;&gt; config.toml</code></li>
+</ul>
+</li>
+<li>test Hugo
+<ul>
+<li><code>hugo new posts/hello-world.md</code></li>
+</ul>
+</li>
+<li>preview on localhost
+<ul>
+<li><code>hugo server -D</code></li>
+</ul>
+</li>
+<li>publish on localhost
+<ul>
+<li><code>hugo</code> or <code>hugo -D</code></li>
+</ul>
+</li>
+<li>setup github pages
+<ul>
+<li>on github.com in your repository: Settings &gt; Pages:</li>
+<li>Source: Branch master, Folder docs</li>
+</ul>
+</li>
+<li>in the docs folder, create an empty <code>.nojekyll</code> file to prevent jekyll workflow on github pages
+<ul>
+<li><code>cd docs</code></li>
+<li><code>touch .nojekyll</code></li>
+</ul>
+</li>
+<li>committing changes
+<ul>
+<li><code>git add -A</code></li>
+<li><code>git commit -am &quot;Hello World and .nojekyll&quot;</code></li>
+<li><code>git push</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="workflow-new-page">Workflow new page</h2>
+<p><code>hugo new posts/name.md</code></p>
+<ul>
+<li>edit content</li>
+<li>publish
+<ul>
+<li><code>git add -A</code></li>
+<li><code>git commit -am &quot;message&quot;</code></li>
+<li><code>git push</code></li>
+</ul>
+</li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://seegers.github.io/" >
+    &copy;  My New Hugo Site 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

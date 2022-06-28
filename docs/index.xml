@@ -6,7 +6,16 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jun 2022 23:58:37 +0200</lastBuildDate><atom:link href="https://seegers.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 13:37:00 +0200</lastBuildDate><atom:link href="https://seegers.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Github Pages with Hugo static site generator and Visual Studio Code</title>
+      <link>https://seegers.github.io/posts/howto_publish_hugo_to_github_pages/</link>
+      <pubDate>Tue, 28 Jun 2022 13:37:00 +0200</pubDate>
+      
+      <guid>https://seegers.github.io/posts/howto_publish_hugo_to_github_pages/</guid>
+      <description>Setup Github Pages with Hugo static site generator and Visual Studio Code Create special GitHub repo for GitHub-Pages and clone it in VSC workspace Go to repo folder on local machine and create Hugo site. Use &amp;ndash;force since the .git files are already there hugo new site . --force add theme Ananke git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&amp;quot;ananke\&amp;quot; &amp;gt;&amp;gt; config.toml change publication directory to &amp;ldquo;docs&amp;rdquo; to align with settings in GitHub pages echo publishDir = \&amp;quot;docs\&amp;quot; &amp;gt;&amp;gt; config.</description>
+    </item>
+    
     <item>
       <title>Hello World</title>
       <link>https://seegers.github.io/posts/hello-world/</link>
