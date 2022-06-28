@@ -1,7 +1,7 @@
 ---
 title: "Setup Github Pages with Hugo static site generator and Visual Studio Code"
 date: 2022-06-28T13:37:43+02:00
-draft: true
+draft: false
 ---
 
 # Setup Github Pages with Hugo static site generator and Visual Studio Code
