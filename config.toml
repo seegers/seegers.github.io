@@ -1,7 +1,8 @@
 baseURL = "https://seegers.github.io/"
 languageCode = "en-us"
-title = "Hugo Whisper Theme"
+title = HowTo"
 theme = "whisper"
+publishDir = "docs"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
