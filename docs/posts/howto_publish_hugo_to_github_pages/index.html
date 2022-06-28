@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Setup Github Pages with Hugo static site generator and Visual Studio Code">
 <meta itemprop="description" content="Setup Github Pages with Hugo static site generator and Visual Studio Code Create special GitHub repo for GitHub-Pages and clone it in VSC workspace Go to repo folder on local machine and create Hugo site. Use &ndash;force since the .git files are already there hugo new site . --force add theme Ananke git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&quot;ananke\&quot; &gt;&gt; config.toml change publication directory to &ldquo;docs&rdquo; to align with settings in GitHub pages echo publishDir = \&quot;docs\&quot; &gt;&gt; config."><meta itemprop="datePublished" content="2022-06-28T13:37:00+02:00" />
 <meta itemprop="dateModified" content="2022-06-28T13:37:00+02:00" />
-<meta itemprop="wordCount" content="167">
+<meta itemprop="wordCount" content="183">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Setup Github Pages with Hugo static site generator and Visual Studio Code"/>
 <meta name="twitter:description" content="Setup Github Pages with Hugo static site generator and Visual Studio Code Create special GitHub repo for GitHub-Pages and clone it in VSC workspace Go to repo folder on local machine and create Hugo site. Use &ndash;force since the .git files are already there hugo new site . --force add theme Ananke git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&quot;ananke\&quot; &gt;&gt; config.toml change publication directory to &ldquo;docs&rdquo; to align with settings in GitHub pages echo publishDir = \&quot;docs\&quot; &gt;&gt; config."/>
@@ -175,6 +175,17 @@
 <li>edit content</li>
 <li>publish
 <ul>
+<li><code>git add -A</code></li>
+<li><code>git commit -am &quot;message&quot;</code></li>
+<li><code>git push</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="workflow-new-publication">Workflow new publication</h2>
+<ul>
+<li>publish current version:
+<ul>
+<li><code>hugo</code></li>
 <li><code>git add -A</code></li>
 <li><code>git commit -am &quot;message&quot;</code></li>
 <li><code>git push</code></li>
