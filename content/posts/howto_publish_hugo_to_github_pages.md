@@ -1,12 +1,12 @@
 ---
-title: "Howto_publish_hugo_to_github_pages"
+title: "Setup Github Pages with Hugo static site generator and Visual Studio Code"
 date: 2022-06-28T13:37:43+02:00
 draft: true
 ---
 
-# Setup Githup Pages with Hugo static site generator and Visual Studio Code
+# Setup Github Pages with Hugo static site generator and Visual Studio Code
 
-- Create special GitHup repo for GitHub-Pages and clone it in VSC workspace
+- Create special GitHub repo for GitHub-Pages and clone it in VSC workspace
 - Go to repo folder on local machine and create Hugo site. Use --force since the .git files are already there
     - `hugo new site . --force`
 - add theme Ananke
